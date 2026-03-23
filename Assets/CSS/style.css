@@ -1,0 +1,561 @@
+         /* CSS Reset & Variables */
+        :root {
+            --bg-color: #0b0b0c;
+            --text-color: #b0b0b0;
+            --heading-color: #ffffff;
+            --accent-color: #c9a96e; /* Elegant gold/beige accent */
+            --font-sans: 'Poppins', sans-serif;
+            --font-serif: 'jost','sans-serif';
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family:'jost','sans-serif';
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family:'jost','sans-serif';
+            color: var(--heading-color);
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--heading-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px; 
+            flex-wrap: wrap;
+            padding: 10px 50px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+       
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            z-index: 10;
+            
+        }
+        header:hover{
+           color: #c9a96e; 
+        }
+
+        .logo h2 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+           
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+           
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: fixed;
+            top: 20px; 
+            width: 100%;
+            z-index: 100; 
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+        .navbar.scrolled{
+            top: 0;
+            background-color: rgba(11, 11, 12, 0.95); /* Dark background so text is readable when scrolling */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Optional subtle border */
+            backdrop-filter: blur(10px); /* Adds a modern blurred glass effect */
+            padding:  20px 50px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(11, 11, 12, 0.4), rgba(11, 11, 12, 0.9)), 
+                        url('/Assets/Images/soulkitchen-86.jpg') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 i {
+            font-style: italic;
+            color: var(--accent-color);
+        }
+
+        /* Features Grid */
+        .features {
+            height: 60vh;
+            display: flex;
+            padding: 80px 5%;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .features h6 {
+            font-family: "Jost", sans-serif;
+            font-optical-sizing: auto;
+        }
+        .features div{
+            padding: 0 10px;
+        }
+        .features h6 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .features p {
+            font-family:  "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 0.9rem;
+            color: white
+
+        }
+
+        /* Split Section */
+        .split-section {
+            height: 60vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .split-item {
+            flex: 1;
+            min-width: 300px;
+            padding: 100px 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .split-item.dark-bg {
+            flex: 1;
+            min-width: 300px;
+            padding: 100px 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .split-item h3 {
+            font-family: 'jost','sans-serif';
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .split-item p {
+            font-family: 'poppins','sans-serif';
+            
+        }
+        .btn {
+            font-family: 'poppins','sans-serif';
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            border: 1px solid var(--heading-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            width: fit-content;
+            align-self: center;
+        }
+        .split-item.image {
+             width: 100%;           /* Or your specific width */
+             height: 400px;         /* Or your specific height */
+             overflow: hidden;      /* CRITICAL: This "clips" the image so it stays in the box */
+             position: relative;
+             padding: 0;
+             
+        }
+
+        .split-item.image img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;     /* Ensures the image fills the box without stretching */
+              transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth, high-end feel */
+        }
+
+        /* The Hover Effect */
+        .split-item.image:hover img {
+            transform: scale(1.1); /* Zooms in by 10% */
+        }
+
+        .btn:hover {
+            background-color: var(--heading-color);
+            color: var(--bg-color);
+        }
+        .content-data {
+            display: flex;
+            flex-direction: column; /* Stacks the two divs on top of each other */
+            align-items: center;    /* Centers the divs horizontally */
+            justify-content: center; /* Centers them vertically if the section has height */
+            text-align: center;      /* Centers the text inside the <p> tags */
+    
+            padding: 100px 20px;     /* Adds breathing room at the top and bottom */
+            background-color: #0b0b0c; /* Matches the dark theme */
+        }
+
+        .content-data div {
+            max-width: 800px;        /* Prevents lines from being too long (easier to read) */
+            margin-bottom: 20px;     /* Space between the two paragraphs */
+        }
+
+        .content-data p {
+            align-items: center;
+            font-family: 'poppins', serif; /* Elegant font choice */
+            font-size: 1.2rem;
+            line-height: 1.8;        /* Increases space between lines for a luxury feel */
+            color: #b0b0b0;          /* Soft grey so it's not harsh white */
+        }
+        .video-data{
+            display: flex;
+            margin: 20px;
+            padding: 10px;
+        }
+        .video-about{
+            align-items: center;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 100px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-section > h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .menu-item {
+            margin-bottom: 30px;
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+            border-bottom: 1px dotted rgba(255,255,255,0.2);
+            padding-bottom: 5px;
+        }
+
+        .menu-item-header h6 {
+            font-size: 1.2rem;
+            font-family: var(--font-sans);
+            font-weight: 400;
+        }
+
+        .menu-item-header span {
+            color: var(--accent-color);
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+        }
+
+        .menu-item p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 80px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer h5 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        footer p, footer ul li a {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .top-bar, nav {
+                display: none; /* Simplify mobile view for template */
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+        @media (max-width: 320px){
+            .top-bar, nav {
+                display: block; /* Simplify mobile view for template */
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+        /* --- Desktop Styles (Default) --- */
+            .main-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 50px;
+                background-color: #0b0b0c;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            
+            
+
+            .nav-menu ul {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+            }
+
+            .nav-menu a {
+                font-family: 'Jost','sans-serif';
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                letter-spacing: 1px;
+                transition: 0.3s;
+            }
+
+            /* Hide toggle elements on Desktop */
+            .menu-toggle, .hamburger {
+                display: none;
+            }
+
+            /* --- Mobile Styles (Media Query) --- */
+            @media screen and (max-width: 768px) {
+                .hamburger {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    cursor: pointer;
+                }
+
+                .hamburger span {
+                    display: block;
+                    width: 25px;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: 0.4s;
+                }
+
+                /* Position the Nav Menu as a Dropdown */
+                .nav-menu {
+                    position: absolute;
+                    top: 100%; /* Sits right below the header */
+                    left: 0;
+                    width: 100%;
+                    background-color: #0b0b0c;
+                    height: 0; /* Hidden by default */
+                    overflow: hidden;
+                    transition: 0.5s ease-in-out;
+                }
+
+                .nav-menu ul {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 40px 0;
+                }
+                .navbar{
+                    display: none;
+                }
+
+                /* THE MAGIC: When checkbox is checked, show the menu */
+                .menu-toggle:checked ~ .nav-menu {
+                    height: 320px; /* Height of your expanded menu */
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
+                }
+
+                /* Optional: Turn Hamburger into an 'X' when checked */
+                .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+                    transform: translateY(7px) rotate(45deg);
+                }
+                .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+                    opacity: 0;
+                }
+                .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+                    transform: translateY(-7px) rotate(-45deg);
+                }
+            }
+            /* --- MOBILE VIEW --- */
+@media screen and (max-width: 768px) {
+    /* Sticky Header Logic */
+    header.main-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #0b0b0c; /* Matches site dark theme */
+        padding: 15px 5%;
+    }
+
+    /* Top Bar: Stack info vertically or hide for a cleaner look */
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Hero Scaling */
+    .hero {
+        padding: 100px 20px;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero p {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    /* Features & Split Sections: Full width stacking */
+    .features, 
+    .split-section, 
+    .content-data,
+    .video-data,
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .features div, 
+    .split-item, 
+    .video-about {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* Split Section Image Adjustment */
+    .split-item.image img {
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Menu Section: Center Dish Names & Prices */
+    .menu-item-header {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .menu-item-header h6 {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    /* Video Section scaling */
+    .video-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Footer Navigation: Stack links for better touch targets */
+    footer div ul {
+        padding: 0;
+        list-style: none;
+    }
+    footer div ul li {
+        margin-bottom: 10px;
+    }
+
+    .copyright {
+        padding: 20px;
+        font-size: 0.7rem;
+    }
+}
+           
