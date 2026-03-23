@@ -17,13 +17,13 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-sans);
+            font-family: 'jost','sans-serif';
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-serif);
+            font-family: 'jost','sans-serif';
             color: var(--heading-color);
             font-weight: 400;
         }
@@ -41,31 +41,13 @@
         /* Top Bar */
         .top-bar {
             display: flex;
-            justify-content:space-between;            
+            justify-content: space-between;
             gap: 15px; 
             flex-wrap: wrap;
             padding: 10px 50px;
             font-size: 0.85rem;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        /* --- TABLET VIEW (Up to 1024px) --- */
-@media screen and (max-width: 1024px) {
-    .top-bar {
-        padding: 10px 20px; /* Reduced side padding */
-        justify-content: center; /* Center everything */
-        gap: 10px;
-    }
-}
-
-/* --- MOBILE VIEW (Up to 768px) --- */
-@media screen and (max-width: 768px) {
-    .top-bar {
-        flex-direction: column; /* Stack contact info above socials */
-        align-items: center; /* Center the stacks */
-        text-align: center;
-        
-        gap: 10px; /* Space between contact info and social icons */
-    }
 
         /* Navigation */
         header {
@@ -121,7 +103,7 @@
             backdrop-filter: blur(10px); /* Adds a modern blurred glass effect */
             padding:  20px 50px;
         }
-/* --- Desktop Styles (Default) --- */
+        /* --- Desktop Styles (Default) --- */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -151,7 +133,6 @@
 /* Hide toggle elements on Desktop */
 .menu-toggle, .hamburger {
     display: none;
-}
 }
 
 /* --- Mobile Styles (Media Query) --- */
