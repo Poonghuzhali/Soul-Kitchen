@@ -108,7 +108,7 @@
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(11, 11, 12, 0.4), rgba(11, 11, 12, 0.9)), 
-                        url('Assets/Images/soulkitchen-86.jpg');
+                        url('.Assets/Images/soulkitchen-86.jpg');
             background-size: cover; 
             background-position: center;     
             display: flex;
