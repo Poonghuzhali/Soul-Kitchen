@@ -108,7 +108,7 @@
         .hero {
             height: 100vh;
             background-image: linear-gradient(rgba(11, 11, 12, 0.4), rgba(11, 11, 12, 0.9)), 
-                        url('https://soulkitchen.redsun.design/dark/wp-content/uploads/sites/3/2022/11/soulkitchen-86.jpg');
+                        url('.https://soulkitchen.redsun.design/dark/wp-content/uploads/sites/3/2022/11/soulkitchen-86.jpg');
             background-size: cover; 
             background-position: center;     
             display: flex;
